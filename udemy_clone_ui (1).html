@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udemy Clone - Platform Học Trực Tuyến</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            <!-- Logo -->
+            <div class="flex items-center gap-6">
+                <a href="#" class="text-2xl font-bold text-purple-700 tracking-tight flex items-center gap-2">
+                    <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+                    <span>EduPulse</span>
+                </a>
+                <button class="hidden md:flex items-center gap-1 text-sm text-gray-600 hover:text-purple-600 font-medium">
+                    <span>Thể loại</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="flex-1 max-w-2xl relative hidden sm:block">
+                <input type="text" placeholder="Tìm kiếm khóa học, kỹ năng, giảng viên..." 
+                       class="w-full bg-gray-100 border border-gray-300 rounded-full py-2 pl-10 pr-4 text-sm focus:outline-none focus:border-purple-600 focus:bg-white transition">
+                <i data-lucide="search" class="w-4 h-4 text-gray-400 absolute left-3 top-3"></i>
+            </div>
+
+            <!-- User Actions -->
+            <div class="flex items-center gap-4">
+                <a href="#" class="hidden lg:block text-sm font-medium text-gray-600 hover:text-purple-600">Dành cho Giảng viên</a>
+                <button class="relative p-2 text-gray-600 hover:text-purple-600">
+                    <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                    <span class="absolute top-0 right-0 bg-purple-600 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">2</span>
+                </button>
+                <button class="hidden md:block px-4 py-2 text-sm font-semibold text-purple-600 border border-purple-600 rounded-lg hover:bg-purple-50">Đăng nhập</button>
+                <button class="px-4 py-2 text-sm font-semibold text-white bg-purple-600 rounded-lg hover:bg-purple-700">Đăng ký</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="bg-gradient-to-r from-purple-900 to-indigo-800 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+                <span class="bg-purple-700 text-purple-200 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Học tập không giới hạn</span>
+                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Nâng cao kỹ năng để dẫn đầu sự nghiệp</h1>
+                <p class="text-purple-200 text-base md:text-lg">Hơn 10,000+ khóa học chất lượng cao về Lập trình, Thiết kế, Marketing và Kinh doanh từ các chuyên gia hàng đầu.</p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <button class="px-6 py-3 bg-white text-purple-900 font-bold rounded-lg hover:bg-gray-100 shadow-md">Khám phá ngay</button>
+                    <button class="px-6 py-3 bg-purple-700 hover:bg-purple-600 text-white font-bold rounded-lg border border-purple-500">Trở thành Giảng viên</button>
+                </div>
+            </div>
+            <div class="hidden md:flex justify-center">
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-xl max-w-sm">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-yellow-400 text-purple-900 rounded-xl">
+                            <i data-lucide="award" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">Chứng chỉ uy tín</h3>
+                            <p class="text-xs text-purple-200">Được công nhận toàn cầu</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-purple-100">Hoàn thành bài học và nhận chứng chỉ để đính kèm vào CV hoặc LinkedIn của bạn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Tab -->
+    <section class="max-w-7xl mx-auto px-4 py-8">
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-hide">
+            <button class="px-4 py-2 bg-purple-600 text-white text-sm font-semibold rounded-full whitespace-nowrap">Tất cả khóa học</button>
+            <button class="px-4 py-2 bg-white text-gray-600 border hover:border-purple-600 text-sm font-semibold rounded-full whitespace-nowrap">Lập trình Web</button>
+            <button class="px-4 py-2 bg-white text-gray-600 border hover:border-purple-600 text-sm font-semibold rounded-full whitespace-nowrap">Khoa học dữ liệu</button>
+            <button class="px-4 py-2 bg-white text-gray-600 border hover:border-purple-600 text-sm font-semibold rounded-full whitespace-nowrap">Thiết kế UI/UX</button>
+            <button class="px-4 py-2 bg-white text-gray-600 border hover:border-purple-600 text-sm font-semibold rounded-full whitespace-nowrap">Digital Marketing</button>
+            <button class="px-4 py-2 bg-white text-gray-600 border hover:border-purple-600 text-sm font-semibold rounded-full whitespace-nowrap">Tài chính & Đầu tư</button>
+        </div>
+    </section>
+
+    <!-- Course Grid -->
+    <main class="max-w-7xl mx-auto px-4 pb-16">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-gray-900">Khóa học nổi bật</h2>
+            <a href="#" class="text-sm font-semibold text-purple-600 hover:underline flex items-center gap-1">
+                Xem tất cả <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- Course Card 1 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500&q=80" alt="Course" class="w-full h-40 object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute top-2 left-2 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-0.5 rounded">Bán chạy nhất</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-gray-900 line-clamp-2 hover:text-purple-600 cursor-pointer">Lập trình ReactJS & Next.js Toàn Tập (2026 Edition)</h3>
+                    <p class="text-xs text-gray-500 mt-1">Nguyễn Văn A • Fullstack Developer</p>
+                    <div class="flex items-center gap-1 mt-2">
+                        <span class="text-xs font-bold text-amber-600">4.8</span>
+                        <div class="flex text-amber-400">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                        </div>
+                        <span class="text-xs text-gray-400">(1,240)</span>
+                    </div>
+                    <div class="flex items-center justify-between mt-4 pt-3 border-t">
+                        <div>
+                            <span class="text-lg font-bold text-gray-900">399.000đ</span>
+                            <span class="text-xs text-gray-400 line-through ml-1">1.200.000đ</span>
+                        </div>
+                        <button class="p-2 bg-purple-50 text-purple-600 rounded-lg hover:bg-purple-600 hover:text-white transition">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 2 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&q=80" alt="Course" class="w-full h-40 object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute top-2 left-2 bg-purple-600 text-white text-xs font-bold px-2 py-0.5 rounded">Mới</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-gray-900 line-clamp-2 hover:text-purple-600 cursor-pointer">Thiết Kế Giao Diện UI/UX Chuyên Nghiệp Bằng Figma</h3>
+                    <p class="text-xs text-gray-500 mt-1">Trần Thị B • UI/UX Lead</p>
+                    <div class="flex items-center gap-1 mt-2">
+                        <span class="text-xs font-bold text-amber-600">4.9</span>
+                        <div class="flex text-amber-400">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                        </div>
+                        <span class="text-xs text-gray-400">(850)</span>
+                    </div>
+                    <div class="flex items-center justify-between mt-4 pt-3 border-t">
+                        <div>
+                            <span class="text-lg font-bold text-gray-900">299.000đ</span>
+                            <span class="text-xs text-gray-400 line-through ml-1">899.000đ</span>
+                        </div>
+                        <button class="p-2 bg-purple-50 text-purple-600 rounded-lg hover:bg-purple-600 hover:text-white transition">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 3 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&q=80" alt="Course" class="w-full h-40 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-gray-900 line-clamp-2 hover:text-purple-600 cursor-pointer">Python Cho Phân Tích Dữ Liệu & Machine Learning</h3>
+                    <p class="text-xs text-gray-500 mt-1">Lê Hoàng C • Data Scientist</p>
+                    <div class="flex items-center gap-1 mt-2">
+                        <span class="text-xs font-bold text-amber-600">4.7</span>
+                        <div class="flex text-amber-400">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                        </div>
+                        <span class="text-xs text-gray-400">(2,100)</span>
+                    </div>
+                    <div class="flex items-center justify-between mt-4 pt-3 border-t">
+                        <div>
+                            <span class="text-lg font-bold text-gray-900">499.000đ</span>
+                            <span class="text-xs text-gray-400 line-through ml-1">1.500.000đ</span>
+                        </div>
+                        <button class="p-2 bg-purple-50 text-purple-600 rounded-lg hover:bg-purple-600 hover:text-white transition">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 4 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" alt="Course" class="w-full h-40 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-gray-900 line-clamp-2 hover:text-purple-600 cursor-pointer">Digital Marketing Thực Chiến Từ A-Z Cho Doanh Nghiệp</h3>
+                    <p class="text-xs text-gray-500 mt-1">Phạm Minh D • Marketing Manager</p>
+                    <div class="flex items-center gap-1 mt-2">
+                        <span class="text-xs font-bold text-amber-600">4.6</span>
+                        <div class="flex text-amber-400">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                        </div>
+                        <span class="text-xs text-gray-400">(620)</span>
+                    </div>
+                    <div class="flex items-center justify-between mt-4 pt-3 border-t">
+                        <div>
+                            <span class="text-lg font-bold text-gray-900">199.000đ</span>
+                            <span class="text-xs text-gray-400 line-through ml-1">600.000đ</span>
+                        </div>
+                        <button class="p-2 bg-purple-50 text-purple-600 rounded-lg hover:bg-purple-600 hover:text-white transition">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h4 class="text-white font-semibold mb-4">EduPulse</h4>
+                <p class="text-sm">Nền tảng học trực tuyến hàng đầu, kết nối hàng triệu học viên và giảng viên toàn cầu.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Về chúng tôi</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white">Giới thiệu</a></li>
+                    <li><a href="#" class="hover:text-white">Cơ hội nghề nghiệp</a></li>
+                    <li><a href="#" class="hover:text-white">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Hỗ trợ</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white">Trung tâm trợ giúp</a></li>
+                    <li><a href="#" class="hover:text-white">Điều khoản sử dụng</a></li>
+                    <li><a href="#" class="hover:text-white">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Tải ứng dụng</h4>
+                <div class="space-y-2">
+                    <button class="w-full py-2 bg-gray-800 hover:bg-gray-700 text-white text-xs rounded-lg border border-gray-700">App Store</button>
+                    <button class="w-full py-2 bg-gray-800 hover:bg-gray-700 text-white text-xs rounded-lg border border-gray-700">Google Play</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-xs">
+            <p>&copy; 2026 EduPulse, Inc. Tất cả quyền được bảo lưu.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white">Tiếng Việt</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
